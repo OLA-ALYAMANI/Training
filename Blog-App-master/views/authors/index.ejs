@@ -1,0 +1,27 @@
+<h1>Authors Page</h1>
+
+<div>
+    <% authors.forEach(function(author){ %>
+
+        <div>
+            <a href="/author/<%= author._id%>"><%= author.name %></a>
+        </div>
+
+        <div>Email Address: <%= author.emailAddress %></div>
+        <div>Phone Number: <%= author.phoneNumber %></div>
+
+
+
+
+        <div>Created On: <%= moment(author.createdAt).fromNow() %></div>
+
+
+        <div>
+            <form method="POST" 
+            action="/author/<%= author._id %>/delete?_method=DELETE">
+        <button type="submit">Delete Author</button>
+        </form>
+        </div>
+
+   <% }) %>
+</div>

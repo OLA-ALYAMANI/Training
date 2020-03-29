@@ -1,0 +1,32 @@
+*{
+    border: black solid 1px;
+}
+#data{
+    display:flex;
+    justify-content:flex-end;
+  }
+  
+  #dashborde{
+    background-color: blue;
+  }
+  
+  #welcom_Wind{
+    margin: 30px;
+  }
+  #welcom_mes{
+    color:#FFFFFF;
+    margin-top:9px;
+    font-size:4ex;
+  }
+ #contaner1{
+     display: grid;
+     grid-template-columns: 1fr;
+     gap: 10px;
+ }
+ /* #balance{
+     background-color: coral;
+     height: 20ex;
+ }
+ #balance_butt{
+     height: 20ex;
+ } */

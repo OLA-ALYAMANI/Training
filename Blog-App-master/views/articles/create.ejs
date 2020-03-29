@@ -1,0 +1,23 @@
+<a href="/">Go Back</a>
+<form method="POST" action="/create">
+  <div>
+    <label>Title</label>
+    <input name="title" />
+  </div>
+  <div>
+    <label>Content</label>
+    <textarea name="content"></textarea>
+  </div>
+
+  <div>
+    <label> Author: </label>
+    <select name="author">
+      <% authors.forEach(function(author) { %>
+        <option value="<%= author._id %>"> <%= author.name %> </option>
+
+      <% }) %>
+      </select>
+  </div>
+
+  <button type="submit">Create Article</button>
+</form>

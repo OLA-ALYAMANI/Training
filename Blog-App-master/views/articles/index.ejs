@@ -1,0 +1,27 @@
+<h1>This is the home</h1>
+<a href="/create">Create Article</a>
+<div>
+  <% articles.forEach(function(article){ %>
+  <div>
+    <!-- _id -->
+    <a href="/article/<%= article._id %>"><h3><%= article.title %></h3></a>
+
+    <div>Written By: <%= article.author.name %></div>
+    <div>Email Address: <%= article.author.emailAddress %></div>
+    <div>Phone Number: <%= article.author.phoneNumber %></div>
+    <div> Author Created on: <%= moment(article.author.createdAt).fromNow() %></div>
+
+
+    <div>Article Created on: <%= moment(article.createdAt).fromNow() %></div>
+    <div>
+      <!-- <a href="/article/<%= article._id %>/delete">Delete</a> -->
+      <form
+        method="POST"
+        action="/article/<%= article._id %>/delete?_method=DELETE"
+      >
+        <button type="submit">Delete resource</button>
+      </form>
+    </div>
+  </div>
+  <% }) %>
+</div>
